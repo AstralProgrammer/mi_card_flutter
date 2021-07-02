@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
               Text(
                 'Angel Reyes',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 40,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Pacifico',
@@ -30,10 +31,17 @@ class MyApp extends StatelessWidget {
               Text(
                 'PHP Developer'.toUpperCase(),
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 20,
                     color: Colors.white70,
                     letterSpacing: 1,
                     fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20,
+                width: 100,
+                child: Divider(
+                  color: Colors.teal.shade50,
+                ),
               ),
               Card(
                 color: Colors.white,
