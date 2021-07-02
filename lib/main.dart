@@ -8,9 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // 0xFF - 0x (required) FF - fully opaque
+    final primaryColor = const Color(0xFF00051b);
+    final secondaryColor = const Color(0xFF30818b);
+
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: primaryColor,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -20,12 +24,12 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/me.jpg'),
               ),
               Text(
-                'Angel Reyes',
+                'Angel Reyes'.toUpperCase(),
                 style: TextStyle(
                   fontSize: 40,
-                  color: Colors.white,
+                  color: secondaryColor,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Pacifico',
+                  fontFamily: 'SansPro',
                 ),
               ),
               Text(
@@ -44,18 +48,18 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                color: Colors.white,
+                color: secondaryColor,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
-                    color: Colors.teal.shade900,
+                    color: primaryColor,
                     size: 18,
                   ),
                   title: Text(
-                    '8844722',
+                    '0916 142 3424',
                     style: TextStyle(
-                        color: Colors.teal.shade900,
+                        color: Colors.white,
                         fontSize: 18,
                         letterSpacing: 1,
                         fontFamily: 'SansPro'),
@@ -63,21 +67,34 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                color: Colors.white,
+                color: secondaryColor,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                 child: ListTile(
                   leading: Icon(
                     Icons.email,
-                    color: Colors.teal.shade900,
+                    color: primaryColor,
                     size: 18,
                   ),
                   title: Text(
-                    'angelica_rys@yahoo.com',
+                    'darkangel0938@gmail.com',
                     style: TextStyle(
-                        color: Colors.teal.shade900,
+                        color: Colors.white,
                         fontSize: 18,
                         fontFamily: 'SansPro'),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Image(
+                image: AssetImage('images/qr-code.png'),
+                height: 200,
+              ),
+              Text(
+                'http://www.astralprogrammer.com',
+                style: TextStyle(
+                  color: secondaryColor,
                 ),
               ),
             ],
